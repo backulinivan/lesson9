@@ -5,9 +5,10 @@ def recurr(g):
     if g==2:
         return 4.25
     if g==3:
-        xn_1=4
-        xn_2=4.25
-        return 108-Fraction(Fraction(815-Fraction(1500,Fraction(xn_1))),Fraction(xn_2))
-    return 108-Fraction(Fraction(815-Fraction(1500,Fraction(recurr(g-2)))),Fraction(recurr(g-1)))
+        xn_1 = Fraction(4, 1)
+        xn_2 = Fraction(17, 4) 
+        return 108 - Fraction((815 - Fraction(1500, xn_1)), xn_2)
+    return 108 - Fraction((815 - Fraction(1500, recurr(g-2))), recurr(g-1))
 f=recurr(int(input()))
 print(f,eval(str(f)))
+print(type(f))
