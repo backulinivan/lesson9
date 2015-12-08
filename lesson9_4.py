@@ -3,7 +3,7 @@ def recurr(g):
     if g==1:
         return 4
     if g==2:
-        return 4.25
+        return Fraction(17, 4)
     if g==3:
         xn_1 = Fraction(4, 1)
         xn_2 = Fraction(17, 4) 
